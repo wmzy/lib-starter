@@ -1,3 +1,8 @@
 module.exports = {
-  presets: [['@babel/env', {modules: false}]]
+  presets: [['@babel/env', {modules: false}]],
+  env: {
+    test: {
+      presets: ['@babel/env']
+    }
+  }
 };

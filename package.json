@@ -12,8 +12,11 @@
   "scripts": {
     "commit": "lint-staged && git-cz",
     "build": "rollup -c",
+    "prepublish": "npm run build",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint --fix .",
-    "test": "mocha --recursive --exclude mock --exclude fixtures -r should -r should-sinon"
+    "test": "cross-env NODE_ENV=test nyc mocha --compilers js:@babel/register --recursive --exclude mock --exclude fixtures -r should -r should-sinon",
+    "start": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -33,9 +36,9 @@
     "node": ">=8.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "commitizen": "^3.0.5",
     "coveralls": "^3.0.2",
