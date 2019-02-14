@@ -15,7 +15,7 @@
     "prepublish": "npm run build",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint --fix .",
-    "test": "cross-env NODE_ENV=test nyc mocha --compilers js:@babel/register --recursive --exclude mock --exclude fixtures -r should -r should-sinon",
+    "test": "cross-env NODE_ENV=test nyc mocha -r @babel/register --recursive --exclude mock --exclude fixtures -r should -r should-sinon",
     "start": "npm test -- --watch"
   },
   "repository": {
