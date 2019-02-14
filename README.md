@@ -7,7 +7,9 @@
 ## Usage
 
 ```bash
-PROJECT_NAME=new-project-name git clone --depth=1 https://github/wmzy/lib-starter $PROJECT_NAME \
+export PROJECT_NAME=new-project-name
+
+git clone --depth=1 https://github.com/wmzy/lib-starter $PROJECT_NAME \
 && cd $PROJECT_NAME \
 && rm -rf .git \
 && git init \
