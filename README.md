@@ -7,13 +7,13 @@
 ## Usage
 
 ```bash
-export PROJECT_NAME=new-project-name
-
-git clone --depth=1 https://github.com/wmzy/lib-starter $PROJECT_NAME \
-&& cd $PROJECT_NAME \
-&& rm -rf .git \
-&& git init \
-&& npm i
+echo new project name: && \
+read -r PROJECT_NAME && \
+git clone --depth=1 https://github.com/wmzy/lib-starter $PROJECT_NAME && \
+cd $PROJECT_NAME && \
+rm -rf .git && \
+git init && \
+npm ci
 ```
 
 ## Workflow
