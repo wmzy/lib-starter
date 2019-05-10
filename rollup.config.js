@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel';
+import {terser} from 'rollup-plugin-terser';
 import pkg from './package.json';
 
 const base = {
@@ -15,6 +16,7 @@ export default [
   // browser-friendly UMD build
   {
     ...base,
+    plugins: [...base.plugins, terser()],
     output: {
       globals: {
         lodash: '_'

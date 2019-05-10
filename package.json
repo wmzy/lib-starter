@@ -5,7 +5,7 @@
   "description": "lib-starter",
   "main": "dist/lib-starter.cjs.js",
   "module": "dist/lib-starter.esm.js",
-  "browser": "dist/lib-starter.umd.js",
+  "browser": "dist/lib-starter.umd.min.js",
   "files": [
     "dist"
   ],
@@ -57,6 +57,7 @@
     "prettier": "^1.16.4",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-terser": "^4.0.4",
     "should": "^13.2.3",
     "should-sinon": "0.0.6",
     "sinon": "^7.2.3"
