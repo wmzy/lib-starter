@@ -3,6 +3,7 @@ module.exports = {
     mocha: true
   },
   rules: {
-    'func-names': 0
+    'builtin-compat/no-incompatible-builtins': 'off',
+    'func-names': 'off'
   }
 };

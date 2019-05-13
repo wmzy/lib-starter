@@ -16,7 +16,7 @@
     "build": "rollup -c",
     "prepublish": "npm run build",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "eslint --fix .",
+    "lint": "eslint --fix src test *.js",
     "test": "cross-env NODE_ENV=test nyc mocha -r @babel/register --recursive --exclude mock --exclude fixtures -r should -r should-sinon",
     "start": "npm test -- --watch"
   },
@@ -49,6 +49,7 @@
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-builtin-compat": "0.0.2",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-mocha": "^5.2.1",
     "eslint-plugin-prettier": "^3.0.1",

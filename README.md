@@ -16,6 +16,10 @@ git init && \
 npm ci
 ```
 
+## Compatibility Note
+
+This lib support [these browsers or devices](.broserslistrc) with [these methods or APIs](.eslintrc.js#L27) pollyfilled.
+
 ## Workflow
 
 ```bash
