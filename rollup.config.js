@@ -28,6 +28,7 @@ export default {
       },
       name: pkg.name,
       file: pkg.browser,
+      sourcemap: true,
       format: 'umd'
     },
     {
@@ -48,10 +49,12 @@ export default {
     // `file` and `format` for each target)
     {
       file: pkg.main,
+      sourcemap: true,
       format: 'cjs'
     },
     {
       file: pkg.module,
+      sourcemap: true,
       format: 'es'
     }
   ]
