@@ -7,7 +7,7 @@
 ## Usage
 
 ```bash
-curl -L https://git.io/lib-starter | bash
+bash <(curl -sL https://git.io/lib-starter)
 ```
 
 ## Compatibility Note
