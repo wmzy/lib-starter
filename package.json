@@ -11,6 +11,7 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "scripts": {
     "commit": "lint-staged && git-cz -n",
     "build": "rollup -c",
