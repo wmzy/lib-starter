@@ -1,6 +1,5 @@
 import babel from 'rollup-plugin-babel';
 import {terser} from 'rollup-plugin-terser';
-import plugins, {file} from 'rollup-plugin-by-output';
 import pkg from './package.json';
 
 const banner = `
@@ -14,12 +13,11 @@ const banner = `
 export default {
   input: 'src/index.js',
   external: ['lodash'],
-  plugins: plugins(
+  plugins: [
     babel({
       exclude: ['node_modules/**']
-    }),
-    [file(/\.min\.js$/), terser({sourcemap: true, output: {comments: /^!/}})]
-  ),
+    })
+  ],
   output: [
     // browser-friendly UMD build
     {
@@ -27,7 +25,7 @@ export default {
         lodash: '_'
       },
       name: pkg.name,
-      file: pkg.browser,
+      file: pkg.unpkg.replace('.min.', '.'),
       sourcemap: true,
       format: 'umd'
     },
@@ -39,7 +37,8 @@ export default {
       banner,
       file: pkg.unpkg,
       sourcemap: true,
-      format: 'umd'
+      format: 'umd',
+      plugins: [terser({output: {comments: /^!/}})]
     },
     // CommonJS (for Node) and ES module (for bundlers) build.
     // (We could have three entries in the configuration array
