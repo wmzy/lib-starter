@@ -52,7 +52,7 @@ export default {
       format: 'cjs'
     },
     {
-      file: pkg.module,
+      file: pkg.exports['.'],
       sourcemap: true,
       format: 'es'
     }
