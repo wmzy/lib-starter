@@ -1,5 +1,9 @@
-import _ from 'lodash';
+/** @typedef { import('../index').Message } Message */
 
-export default function hello() {
-  return _.VERSION;
+/**
+ * Form
+ * @param {Message} message
+ */
+export default function hello(message) {
+  return `hello ${message}`;
 }

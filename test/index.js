@@ -1,8 +1,9 @@
-import _ from 'lodash';
 import hello from '../src';
 
-describe('lib-starter', function() {
-  it('hello', function() {
-    hello().should.be.equal(_.VERSION);
+/** @typedef {import('should')} */
+
+describe('lib-starter', () => {
+  it('hello', () => {
+    hello('world').should.be.equal('hello world');
   });
 });
