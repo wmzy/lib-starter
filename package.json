@@ -70,12 +70,6 @@
     "sinon": "^11.1.1",
     "typescript": "^4.3.4"
   },
-  "lint-staged": {
-    "*.js": [
-      "cross-env NODE_ENV=production eslint --fix",
-      "git add"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
