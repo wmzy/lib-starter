@@ -5,6 +5,8 @@
     "jsx": "react",
     "allowJs": true,
     "checkJs": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "noEmit": true
   }
 }
