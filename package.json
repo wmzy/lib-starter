@@ -46,7 +46,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.17.7",
     "@types/mocha": "^9.1.1",
-    "commitizen": "^4.2.4",
+    "commitizen": "^4.3.0",
     "coveralls": "^3.1.1",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
