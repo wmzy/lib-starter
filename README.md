@@ -13,7 +13,7 @@ bash <(curl -sL https://git.io/lib-starter)
 
 ## Compatibility Note
 
-This lib support [these browsers or devices](.broserslistrc) with [these methods or APIs](.eslintrc.js#L27) pollyfilled.
+This lib support [these browsers or devices](.broserslistrc) with [these methods or APIs](.eslintrc.js#L27) polyfilled.
 
 ## Workflow
 
